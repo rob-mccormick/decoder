@@ -1,1 +1,1 @@
-web: gunicorn decoder.wsgi
+web: gunicorn decoder.wsgi —-log-file -

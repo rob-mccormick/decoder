@@ -3,4 +3,7 @@ django-heroku
 dj-database-url
 gunicorn
 psycopg2-binary
+python-dateutil
 python-dotenv
+requests
+urllib3
