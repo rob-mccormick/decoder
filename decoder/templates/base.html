@@ -22,7 +22,7 @@
     <!-- Fontawesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'jobs/style.css' %}" />
     <!-- SEO -->
@@ -92,21 +92,19 @@
     <footer class="bg-footer">
       <div class="container-fluid">
         <div class="container">
-          <div class="row text-light">
-            <div class="col-6 col-md-3 logo-links">
-              <a href="https://www.idealrole.com"><div><img class="footer-logo" src="{% static 'jobs/images/idealrole-logo-footer.png' %}" alt="Ideal Role logo"></div></a>
-                  <div class="d-inline-flex">
-                      <a href="https://www.linkedin.com/company/idealrole/"><div class="footer-icons"><img src="{% static 'jobs/images/LinkedIn-icon-25.png' %}" alt="LinkedIn"></div></a>
-                      <a href="https://twitter.com/idealrole"><div class="footer-icons twitter"><img src="{% static 'jobs/images/twitter-icon.png' %}" alt="Twitter"></div></a>
-                      <a href="mailto:care@idealrole.com"><div class="footer-icons mail"><img src="{% static 'jobs/images/letter-icon.png' %}" alt="Email"></div></a>
-                  </div>
-
+          <div class="row">
+            <div class="col-6 col-md-7">
+              <a href="https://www.idealrole.com"><div><img class="footer-logo" src="{% static 'jobs/images/IR-logotype-footer.png' %}" alt="Ideal Role logo"></div></a>
+              <div class="footer-one-liner">
+                <p>It’s hard work getting people to apply for your jobs when they have so many options. With Ideal Role’s chatbot on your career site, you can help people understand and apply for your jobs all day, every day.</p>
+              </div>
+              <div class="footer-copyright">
+                <p>&copy; Ideal Role Limited {% now "Y" %}</p>
+              </div>
             </div>
-            <div class="col-6 col-md-3 footer-links">
-              <ul class="list-unstyled mb-2">
-                <li>
-                  <a href="https://www.idealrole.com" class="footer-link footer-text">Home</a>
-                </li>
+            <div class="col-6 col-md-2 footer-links">
+              <p class="footer-links-header">Resources</p>
+              <ul class="list-unstyled footer-list mb-2">
                 <li>
                   <a href="https://www.idealrole.com/blog" class="footer-link footer-text">Blog</a>
                 </li>
@@ -116,52 +114,23 @@
                 <li>
                   <a href="https://decoder.idealrole.com" class="footer-link footer-text">Decoder</a>
                 </li>
+              </ul>
+            </div>
+            <div class="col-0 col-md-2 footer-links">
+              <p class="footer-links-header">Legal</p>
+              <ul class="list-unstyled footer-list mb-2">
                 <li>
                   <a href="https://www.idealrole.com/privacy" class="footer-link footer-text">Privacy</a>
                 </li>
               </ul>
             </div>
-            <div class="col-0 col-md-1">
-            </div>
-            <div class="col-12 col-md-5 footer-details">
-              <p class="footer-text footer-address">18 Finsbury Square<br>London EC2A 1BR</p>
-              <p class="footer-small footer-text footer-detail">&copy; {% now "Y" %} Ideal Role Limited</p>
-              <p class="footer-small footer-text footer-long-text">Ideal Role is registered and incorporated in England and Wales, company registration number 11145590.</p>
+            <div class="col-12 col-md-1 footer-media">
+              <a href="https://www.linkedin.com/company/idealrole/"><div class="footer-icons"><img src="{% static 'jobs/images/linkedin-icon.png' %}" alt="LinkedIn"></div></a>
+              <a href="mailto:care@idealrole.com"><div class="footer-icons mail"><img src="{% static 'jobs/images/email-icon.png' %}" alt="Email"></div></a>
             </div>
           </div>
         </div>
       </div>
-      <!-- ActiveCampaign tracking code -->
-      <script type="text/javascript">
-        // Set to false if opt-in required
-        var trackByDefault = true;
-
-        function acEnableTracking() {
-          var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
-          document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
-          acTrackVisit();
-        }
-
-        function acTrackVisit() {
-          var trackcmp_email = '';
-          var trackcmp = document.createElement("script");
-          trackcmp.async = true;
-          trackcmp.type = 'text/javascript';
-          trackcmp.src = '//trackcmp.net/visit?actid=1000173168&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
-          var trackcmp_s = document.getElementsByTagName("script");
-          if (trackcmp_s.length) {
-            trackcmp_s[0].parentNode.appendChild(trackcmp);
-          } else {
-            var trackcmp_h = document.getElementsByTagName("head");
-            trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
-          }
-        }
-
-        if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {
-          acEnableTracking();
-        }
-      </script>
-      <!-- End ActiveCampaign tracking code -->
     </footer>
     <!-- end of footer -->
 

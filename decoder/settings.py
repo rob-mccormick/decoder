@@ -22,20 +22,6 @@ DEBUG = (os.environ.get('DEBUG_DEV') == 'True')
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '.herokuapp.com', '.idealrole.com']
 
-# # BEFORE GOING INTO PRODUCTION:
-# # 1 - Switch Databases
-# # 2 - Update SSL settings
-
-
-# # SECURITY WARNING: don't run with debug turned on in production!
-# # DEBUG = True
-# DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
-
-# # Development
-# ALLOWED_HOSTS = []
-
-# # Production
-# # ALLOWED_HOSTS = ['.herokuapp.com', '.idealrole.com']
 
 # Application definition
 
@@ -97,25 +83,6 @@ DATABASES = {
 }
 
 
-# # Production Database
-# # DATABASES = {
-# #     'default': {
-# #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-# #         'NAME': 'decoderdb',
-# #         'USER': 'name',
-# #         'PASSWORD': '',
-# #         'HOST': 'localhost',
-# #         'PORT': '',
-# #     }
-# # }
-
-# # DATABASES['default'] = dj_database_url.config(conn_max_age=500, ssl_require=True)
-
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -151,6 +118,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'jobs/static/')
 ]
@@ -171,3 +139,8 @@ django_heroku.settings(locals())
 # Set up database for Heroku
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
+
+# # DATABASES['default'] = dj_database_url.config(conn_max_age=500, ssl_require=True)
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

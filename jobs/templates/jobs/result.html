@@ -12,13 +12,13 @@
         <div class="col-12 col-md-10 col-lg-8 mb-3">
           <div class="result-title">
             {% if job.result == 'Masculine' or job.result == 'Slightly masculine' %}
-            <h1 class="result-header masculine">{{ job.result }}</h1>
+            <h1 class="result-header masculine">{{ job.result }}  👨</h1>
             <div class="title-line m-line"></div>
             {% elif job.result == 'Neutral' %}
-            <h1 class="result-header neutral">{{ job.result }}</h1>
+            <h1 class="result-header neutral">{{ job.result }}  😀</h1>
             <div class="title-line n-line"></div>
             {% else %}
-            <h1 class="result-header feminine">{{ job.result }}</h1>
+            <h1 class="result-header feminine">{{ job.result }}  👩</h1>
             <div class="title-line f-line"></div>
             {% endif %}
           </div>
@@ -50,7 +50,7 @@
 
       <div class="col-lg-4 col-md-5 col-sm-8 text-center my-3">
         <i class="fa-3x fas fa-mars mb-3"></i>
-        <p>{{ job.masc_word_proportion }}% masculine words</p>
+        <p class="gender-word-title">{{ job.masc_word_proportion }}%</p>
         <ul class="list-group list-group-flush">
           {% for word, counttotal in mascdictsorted %}
 
@@ -62,7 +62,7 @@
 
       <div class="col-lg-4 col-md-5 col-sm-8 text-center my-3">
         <i class="fa-3x fas fa-venus mb-3"></i>
-        <p>{{ job.fem_word_proportion }}% feminine words</p>
+        <p class="gender-word-title">{{ job.fem_word_proportion }}%</p>
         <ul class="list-group list-group-flush">
           {% for word, counttotal in femdictsorted %}
 
