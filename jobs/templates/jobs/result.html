@@ -1,0 +1,605 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <br>
+  <!-- title -->
+  <div class="jumbotron">
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 mb-3">
+          <div class="result-title">
+            {% if job.result == 'Masculine' or job.result == 'Slightly masculine' %}
+            <h1 class="result-header masculine">{{ job.result }}</h1>
+            <div class="title-line m-line"></div>
+            {% elif job.result == 'Neutral' %}
+            <h1 class="result-header neutral">{{ job.result }}</h1>
+            <div class="title-line n-line"></div>
+            {% else %}
+            <h1 class="result-header feminine">{{ job.result }}</h1>
+            <div class="title-line f-line"></div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-8">
+          {% if job.result == 'Masculine' %}
+          <p>Your job ad may put women off applying.  It’s worth changing some of the masculine words to get it more neutral.</p>
+          {% elif job.result == 'Neutral' %}
+          <p>Well done!  No gender word favourites here.</p>
+          {% else %}
+          <p>Your job ad will encourage women to apply - but may put a few men off.  Making it neutral could help balance it out.</p>
+          {% endif %}
+          <p class="pt-2">Gendered words are one factor that can impact who applies for your jobs.  To improve your company's diversity, you should also consider:</p>
+          <ul>
+            <li class="list-point">Your company culture</li>
+            <li class="list-point">If you’re actively fair and inclusive</li>
+            <li class="list-point">Your reputation for equality, diversity and inclusiveness</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of title -->
+
+  <!-- Gender results -->
+  <div class="container">
+    <div class="row my-5 justify-content-center">
+
+      <div class="col-lg-4 col-md-5 col-sm-8 text-center my-3">
+        <i class="fa-3x fas fa-mars mb-3"></i>
+        <p>{{ job.masc_word_proportion }}% masculine words</p>
+        <ul class="list-group list-group-flush">
+          {% for word, counttotal in mascdictsorted %}
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">{{ word }} <span class="badge badge-warning">{{ counttotal }}</span></li>
+
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-5 col-sm-8 text-center my-3">
+        <i class="fa-3x fas fa-venus mb-3"></i>
+        <p>{{ job.fem_word_proportion }}% feminine words</p>
+        <ul class="list-group list-group-flush">
+          {% for word, counttotal in femdictsorted %}
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">{{ word }} <span class="badge badge-warning">{{ counttotal }}</span></li>
+
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <!-- End gender results -->
+
+
+    <!-- Further Info -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 col-md-10 col-lg-8">
+        <h2 class="h2-results">Now, how to replace your gendered words</h2>
+        <div class="result-info-line"></div>
+        <p>Making your job ad more balanced is easy.  Just swap some of the gendered words with neutral alternatives.  But thinking of neutral words is not the most exciting task.  Tedious at best.</p>
+        <p>To help you out we’ve put together a <a class="link" href="https://uploads-ssl.webflow.com/5b892866490d737ec202537e/5c377e17d8ed0b97f714b308_Gender%20Decoder%20-%20Alternative%20words%2010%20Jan%202019.pdf" target="_blank">list of over 1,000 gender neutral words</a>.</p>
+        <p>Simply search for the word you want to replace and you’ll find neutral alternatives.  There should be options for most contexts.  Or at least some words to get the ideas flowing.</p>
+        <p>You may also find it helpful to see which words to avoid.  For the full list of gendered words picked up by the decoder, click <a class="link" data-toggle="collapse" href="#GenderedWords" role="button" aria-expaneded="false" aria-controls="collapseExample">here</a> (opens below - click again to close).</p>
+      </div>
+    </div>
+    <!-- End further info -->
+
+
+    <!-- Buttons and Gendered Words List -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 mt-2 mb-5">
+        <div class="result-buttons">
+          <div>
+            <a class="submit-button" role="button" onclick="window.location='{% url 'submit' %}';">New Check</a>
+          </div>
+          <!-- <div class="second-button">
+            <a class="submit-button" data-toggle="collapse" href="#GenderedWords" role="button" aria-expaneded="false" aria-controls="collapseExample">Gendered Words</a>
+          </div> -->
+        </div>
+
+        <div class="collapse mt-5" id="GenderedWords">
+          <div class="card card-body">
+            <h2 class="h2-gendered-words">Full list of gendered words</h2>
+            <p class="mb-2">Below is a list of the gendered words and phrases used by the decoder.</p>
+            <p class="mb-2">You’ll notice that some of the words are incomplete.  This is because the decoder will search for all words that start with those letters.</p>
+            <p class="mb-5">For example, “analy” will find both “analysis” and “analyse”.</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Masculine</th>
+                  <th scope="col">Feminine</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>active</td>
+                  <td>affectionate</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>adventurous</td>
+                  <td>child</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>aggress</td>
+                  <td>cheer</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>ambitio</td>
+                  <td>commit</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>analy</td>
+                  <td>communal</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>assert</td>
+                  <td>compassion</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>athlet</td>
+                  <td>connect</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>autonom</td>
+                  <td>considerate</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>boast</td>
+                  <td>cooperat</td>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>challeng</td>
+                  <td>co-operat</td>
+                </tr>
+                <tr>
+                  <th scope="row">11</th>
+                  <td>compet</td>
+                  <td>depend</td>
+                </tr>
+                <tr>
+                  <th scope="row">12</th>
+                  <td>confident</td>
+                  <td>emotiona</td>
+                </tr>
+                <tr>
+                  <th scope="row">13</th>
+                  <td>courag</td>
+                  <td>empath</td>
+                </tr>
+                <tr>
+                  <th scope="row">14</th>
+                  <td>decide</td>
+                  <td>female</td>
+                </tr>
+                <tr>
+                  <th scope="row">15</th>
+                  <td>decisive</td>
+                  <td>feminine</td>
+                </tr>
+                <tr>
+                  <th scope="row">16</th>
+                  <td>decision</td>
+                  <td>flatterable</td>
+                </tr>
+                <tr>
+                  <th scope="row">17</th>
+                  <td>determin</td>
+                  <td>gentle</td>
+                </tr>
+                <tr>
+                  <th scope="row">18</th>
+                  <td>domina</td>
+                  <td>honest</td>
+                </tr>
+                <tr>
+                  <th scope="row">19</th>
+                  <td>force</td>
+                  <td>interdependen</td>
+                </tr>
+                <tr>
+                  <th scope="row">20</th>
+                  <td>greedy</td>
+                  <td>inter-dependen</td>
+                </tr>
+                <tr>
+                  <th scope="row">21</th>
+                  <td>guy</td>
+                  <td>interpersona</td>
+                </tr>
+                <tr>
+                  <th scope="row">22</th>
+                  <td>head-strong</td>
+                  <td>inter-persona</td>
+                </tr>
+                <tr>
+                  <th scope="row">23</th>
+                  <td>headstrong</td>
+                  <td>kind</td>
+                </tr>
+                <tr>
+                  <th scope="row">24</th>
+                  <td>hierarch</td>
+                  <td>kinship</td>
+                </tr>
+                <tr>
+                  <th scope="row">25</th>
+                  <td>hostil</td>
+                  <td>loyal</td>
+                </tr>
+                <tr>
+                  <th scope="row">26</th>
+                  <td>impulsive</td>
+                  <td>modesty</td>
+                </tr>
+                <tr>
+                  <th scope="row">27</th>
+                  <td>intens</td>
+                  <td>nag</td>
+                </tr>
+                <tr>
+                  <th scope="row">28</th>
+                  <td>independen</td>
+                  <td>nurtur</td>
+                </tr>
+                <tr>
+                  <th scope="row">29</th>
+                  <td>individual</td>
+                  <td>pleasant</td>
+                </tr>
+                <tr>
+                  <th scope="row">30</th>
+                  <td>intellect</td>
+                  <td>polite</td>
+                </tr>
+                <tr>
+                  <th scope="row">31</th>
+                  <td>lead</td>
+                  <td>quiet</td>
+                </tr>
+                <tr>
+                  <th scope="row">32</th>
+                  <td>logic</td>
+                  <td>respon</td>
+                </tr>
+                <tr>
+                  <th scope="row">33</th>
+                  <td>masculine</td>
+                  <td>sensitiv</td>
+                </tr>
+                <tr>
+                  <th scope="row">34</th>
+                  <td>objective</td>
+                  <td>submissive</td>
+                </tr>
+                <tr>
+                  <th scope="row">35</th>
+                  <td>opinion</td>
+                  <td>support</td>
+                </tr>
+                <tr>
+                  <th scope="row">36</th>
+                  <td>outspoken</td>
+                  <td>sympath</td>
+                </tr>
+                <tr>
+                  <th scope="row">37</th>
+                  <td>persist</td>
+                  <td>tender</td>
+                </tr>
+                <tr>
+                  <th scope="row">38</th>
+                  <td>principle</td>
+                  <td>together</td>
+                </tr>
+                <tr>
+                  <th scope="row">39</th>
+                  <td>reckless</td>
+                  <td>trust</td>
+                </tr>
+                <tr>
+                  <th scope="row">40</th>
+                  <td>self-confiden</td>
+                  <td>understand</td>
+                </tr>
+                <tr>
+                  <th scope="row">41</th>
+                  <td>selfconfiden</td>
+                  <td>warm</td>
+                </tr>
+                <tr>
+                  <th scope="row">42</th>
+                  <td>self-relian</td>
+                  <td>whin</td>
+                </tr>
+                <tr>
+                  <th scope="row">43</th>
+                  <td>selfrelian</td>
+                  <td>woman</td>
+                </tr>
+                <tr>
+                  <th scope="row">44</th>
+                  <td>self-sufficien</td>
+                  <td>women</td>
+                </tr>
+                <tr>
+                  <th scope="row">45</th>
+                  <td>selfsufficien</td>
+                  <td>yield</td>
+                </tr>
+                <tr>
+                  <th scope="row">46</th>
+                  <td>stubborn</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">47</th>
+                  <td>superior</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">48</th>
+                  <td>beer</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">49</th>
+                  <td>brogrammer</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">50</th>
+                  <td>businessm</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">51</th>
+                  <td>chairman</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">52</th>
+                  <td>enforce</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">53</th>
+                  <td>exhaustive</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">54</th>
+                  <td>fast-paced</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">55</th>
+                  <td>fearless</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">56</th>
+                  <td>flawless</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">57</th>
+                  <td>foosball</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">58</th>
+                  <td>guru</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">59</th>
+                  <td>hacker</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">60</th>
+                  <td>high-performance</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">61</th>
+                  <td>jedi</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">62</th>
+                  <td>man-hours</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">63</th>
+                  <td>man-made</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">64</th>
+                  <td>manmade</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">65</th>
+                  <td>mankind</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">66</th>
+                  <td>mission-critical</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">67</th>
+                  <td>ninja</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">68</th>
+                  <td>rigid</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">69</th>
+                  <td>rockstar</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">70</th>
+                  <td>strong</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">71</th>
+                  <td>superstar</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">72</th>
+                  <td>wizard</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">73</th>
+                  <td>workforce</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">74</th>
+                  <td>"best of the best"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">75</th>
+                  <td>"play hard"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">76</th>
+                  <td>"set the standard"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">77</th>
+                  <td>"sets the standard"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">78</th>
+                  <td>"stock options"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">79</th>
+                  <td>"stringent expectations"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">80</th>
+                  <td>"take risks"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">81</th>
+                  <td>"takes risks"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">82</th>
+                  <td>"type a"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">83</th>
+                  <td>"work hard"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">84</th>
+                  <td>"V.I.P."</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">85</th>
+                  <td>"manage"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">86</th>
+                  <td>"man"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">87</th>
+                  <td>"men"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">88</th>
+                  <td>"male"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">89</th>
+                  <td>"males"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">90</th>
+                  <td>"drive"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">91</th>
+                  <td>"driving"</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">92</th>
+                  <td>"driven"</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <br/>
+            <p class="mt-3 mb-4">Please <a href="mailto:care@idealrole.com">contact us</a> if you have any questions or suggestions.</p>
+            <p><a class="plus-button" data-toggle="collapse" href="#GenderedWords" role="button" aria-expaneded="false" aria-controls="collapseExample">Close</a></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- End buttons and gendered words list -->
+
+
+    <!-- Submitted job ad -->
+    <div class="row justify-content-center job-ad-result">
+      <div class="col-12 col-lg-10 jobad-textarea">
+        <p class="result-label">Your job ad:</p>
+        <textarea id="result-area" name="job_result">{{ job.job_text }}</textarea>
+      </div>
+    </div>
+    <!-- End submitted job ad -->
+
+  </div>
+
+{% endblock %}

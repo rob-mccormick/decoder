@@ -1,0 +1,184 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113075557-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-113075557-1');
+    </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://decoder.idealrole.com" />
+    <link rel="title icon" type="image/png" href="{% static 'jobs/images/ir-favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:400,600,700,800" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'jobs/style.css' %}" />
+    <!-- SEO -->
+    <title>Find Hidden Bias In Your Job Ads | Ideal Role Decoder</title>
+    <meta name="description" content="Free to use, the Decoder finds gendered words in your job ads. Removing these words will help you to avoid bias and attract more people to your jobs.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ideal Role Decoder - Find Hidden Bias In Your Job Ads" />
+    <meta property="og:description" content="Free to use, the Decoder finds gendered words in your job ads. Removing these words can help you to avoid bias and attract more people to your jobs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://decoder.idealrole.com" />
+    <meta property="og:image" content="{% static 'jobs/images/Ideal-Role-Decoder-OG.png' %}" />
+    <meta property="og:site_name" content="Ideal Role" />
+    <meta property="og:determiner" content="the" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Cookie consent -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#ebebeb",
+          "text": "#333333"
+        },
+        "button": {
+          "background": "transparent",
+          "border": "#fc483a",
+          "text": "#fc483a"
+        }
+      },
+      "position": "bottom-left",
+      "content": {
+        "message": "We use cookies to ensure you get the best experience.",
+        "href": "https://www.idealrole.com/privacy"
+      }
+    })});
+    </script>
+    <!-- End Cookie consent -->
+
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container">
+        <a href="https://www.idealrole.com" class="navbar-brand"><img src="{% static 'jobs/images/IR-logotype-blue.png' %}" alt="Ideal Role logo" width="134px"></a>
+        <button type="button" class="navbar-toggler navbar-light" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="nav">
+          <ul class="navbar-nav">
+            <li class="nav-item nav-text"><a class="nav-link px-3" href="https://www.idealrole.com">Home</a></li>
+            <li class="nav-item nav-text"><a class="nav-link px-3" href="https://www.idealrole.com/newsletter">Newsletter</a></li>
+            <li class="nav-item nav-text"><a class="nav-link px-3" href="https://www.idealrole.com/blog">Blog</a></li>
+            <li class="nav-item nav-text active"><a class="nav-link px-3" href="https://decoder.idealrole.com">Decoder</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+  {% block content %}
+  {% endblock %}
+
+    <!-- footer -->
+    <footer class="bg-footer">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row text-light">
+            <div class="col-6 col-md-3 logo-links">
+              <a href="https://www.idealrole.com"><div><img class="footer-logo" src="{% static 'jobs/images/idealrole-logo-footer.png' %}" alt="Ideal Role logo"></div></a>
+                  <div class="d-inline-flex">
+                      <a href="https://www.linkedin.com/company/idealrole/"><div class="footer-icons"><img src="{% static 'jobs/images/LinkedIn-icon-25.png' %}" alt="LinkedIn"></div></a>
+                      <a href="https://twitter.com/idealrole"><div class="footer-icons twitter"><img src="{% static 'jobs/images/twitter-icon.png' %}" alt="Twitter"></div></a>
+                      <a href="mailto:care@idealrole.com"><div class="footer-icons mail"><img src="{% static 'jobs/images/letter-icon.png' %}" alt="Email"></div></a>
+                  </div>
+
+            </div>
+            <div class="col-6 col-md-3 footer-links">
+              <ul class="list-unstyled mb-2">
+                <li>
+                  <a href="https://www.idealrole.com" class="footer-link footer-text">Home</a>
+                </li>
+                <li>
+                  <a href="https://www.idealrole.com/blog" class="footer-link footer-text">Blog</a>
+                </li>
+                <li>
+                  <a href="https://www.idealrole.com/newsletter" class="footer-link footer-text">Newsletter</a>
+                </li>
+                <li>
+                  <a href="https://decoder.idealrole.com" class="footer-link footer-text">Decoder</a>
+                </li>
+                <li>
+                  <a href="https://www.idealrole.com/privacy" class="footer-link footer-text">Privacy</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-0 col-md-1">
+            </div>
+            <div class="col-12 col-md-5 footer-details">
+              <p class="footer-text footer-address">18 Finsbury Square<br>London EC2A 1BR</p>
+              <p class="footer-small footer-text footer-detail">&copy; {% now "Y" %} Ideal Role Limited</p>
+              <p class="footer-small footer-text footer-long-text">Ideal Role is registered and incorporated in England and Wales, company registration number 11145590.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ActiveCampaign tracking code -->
+      <script type="text/javascript">
+        // Set to false if opt-in required
+        var trackByDefault = true;
+
+        function acEnableTracking() {
+          var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
+          document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
+          acTrackVisit();
+        }
+
+        function acTrackVisit() {
+          var trackcmp_email = '';
+          var trackcmp = document.createElement("script");
+          trackcmp.async = true;
+          trackcmp.type = 'text/javascript';
+          trackcmp.src = '//trackcmp.net/visit?actid=1000173168&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+          var trackcmp_s = document.getElementsByTagName("script");
+          if (trackcmp_s.length) {
+            trackcmp_s[0].parentNode.appendChild(trackcmp);
+          } else {
+            var trackcmp_h = document.getElementsByTagName("head");
+            trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+          }
+        }
+
+        if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {
+          acEnableTracking();
+        }
+      </script>
+      <!-- End ActiveCampaign tracking code -->
+    </footer>
+    <!-- end of footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="{% static 'jobs/smooth-scroll.js' %}"></script>
+    <!-- Smooth scroll and Rotate plus icon -->
+    <script>
+      var scroll = new SmoothScroll('a[href*="#job-check"]');
+      // Rotate plus icon
+      $(".rotate, .plus-rotate").click(function(){
+       $(".rotate").toggleClass("down")  ;
+      })
+    </script>
+
+  </body>
+</html>

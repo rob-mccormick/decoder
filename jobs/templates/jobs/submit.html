@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- hero-section -->
+    <br>
+    <div class="hero pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="title mx-auto">
+              <h1 class="pb-3 hero-h1">Find hidden bias in your job&nbsp;ads</h1>
+              <div class="title-line mb-5"></div>
+              <p class="hero-p">Introducing the Decoder - a free tool to check your job ads for gendered&nbsp;words</p>
+              <a class="submit-button mt-4" href="#job-check">Check Your Job Ad</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <img class="hero-image" src="{% static 'jobs/images/Ideal-Role-typewriter-hero.png' %}" alt="Highlight gender coded words">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Info on what it is and how it works -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <h2 class="h2-submit pb-0">Why gendered words are important</h2>
+          <div class="h2-line mb-5"></div>
+          <p>Words impact us.  Sometimes directly, like a question or command.  Other times, without us being aware of how they change our behaviour.</p>
+          <p>And some words affect some people, but not others.  Gendered words impact men and women differently.  Often in subtle ways that we are unaware of.</p>
+          <p>In their paper, ‘Evidence That Gendered Wording in Job Adverts Exists and Sustains Gender Inequality’, researchers Gaucher, Friesen and Kay showed that:</p>
+          <ul>
+              <li class="list-point">Fewer women apply when there are more masculine words in a job ad</li>
+              <li class="list-point">Ads for traditionally male jobs tend to have more masculine words</li>
+              <li class="list-point">Women are attracted to job ads with more feminine wording - but slightly fewer men will apply</li>
+              <li class="list-point">Gendered words in job ads can lead to unintended bias</li>
+          </ul>
+          <p>Learn more about the <a class="link" href="https://www.idealrole.com/blog/gender-job-ads" target="_blank">study of gendered words in job ads</a>.</p>
+
+
+        <h3 id="job-check" class="mt-5 mb-2">Check your job ad for gendered words</h3>
+        <div class="submit-line"></div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- submit text -->
+  <div class="container">
+    <div class="container text-danger">
+      {% if error %}
+      {{ error }}
+      <br>
+      <br>
+      {% endif %}
+    </div>
+
+    <div class="container mb-5">
+      <form method="POST" action="{% url 'submit' %}">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-11 col-lg-10 jobad-textarea">
+            <div class="job-form">
+              {% csrf_token %}
+
+              <textarea class="form-control" name="job_text" id="job_text" placeholder="Simply paste your job ad here and hit 'Decode' below" required></textarea>
+
+              <div class="col mt-3 submission">
+                <input class="submit-button mt-3" type="submit" value="Decode">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- end of submit text -->
+
+
+  <!-- Privacy statement -->
+  <div class="container privacy-statement">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-11 col-lg-8">
+        <p class="privacy-heading">A note on privacy</p>
+        <p>We want to help you reduce bias in your job ads.  That's why the decoder is free and we'll keep your information private.</p>
+        <p>You can see our <a class="privacy link" href="https://www.idealrole.com/privacy" target="_blank">Privacy Policy</a> for more details.</p>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
