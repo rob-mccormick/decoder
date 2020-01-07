@@ -4,11 +4,7 @@ body {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
 }
 
-p {
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-}
-
-li {
+p, li, textarea {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
@@ -23,7 +19,9 @@ li {
 
 .nav-link {
   /* text-transform: uppercase; */
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 400;
   color: #333;
   letter-spacing: 1px;
@@ -262,19 +260,17 @@ textarea {
 
 /* RESULTS */
 
+.jumbotron {
+  background-color: #f7f7f7;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
 .result-title h1 {
   margin-bottom: 10px;
   padding-top: 15px;
   font-weight: 700;
 }
-
-/* .neutral {
-  color: #f9d117;
-} */
-
-/* .result-header {
-  text-transform: capitalize;
-} */
 
 .m-line {
   background-color: #90c8fd;
@@ -288,28 +284,46 @@ textarea {
   background-color: #f9d117;
 }
 
-.jumbotron {
-  background-color: #f7f7f7;
-  padding-top: 100px;
+.result-blurb {
+  font-size: 22px;
 }
 
 .fa-mars {
-  color: #90c8fd;
+  color: #bad8e2;
 }
 
 .fa-venus {
   color: #ffb4a7;
 }
 
-.result-buttons {
-  display: flex;
-  flex-direction: column;
+.word-result {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.word-result-masc {
+  border: solid 8px rgba(186,216,226,0.5);
+}
+
+.word-result-fem {
+  border: solid 8px rgba(255,180,167,0.5);
 }
 
 .gender-word-title {
   font-size: 20px;
   font-weight: 600;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #888;
+  background-color: #ebebeb;
+  border-radius: 12px;
+  padding: 10px 0;
+  margin: 0 32% 20px 32%;
+}
+
+.result-buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Further info */
@@ -385,8 +399,7 @@ textarea {
   padding: 8px 0;
   margin-bottom: -2px;
   text-transform: capitalize;
-  /* letter-spacing: 1px; */
-  border: solid 2px #333;
+  border: solid 2px #888;
   border-radius: 5px 5px 0 0;
   background-color: rgba(249, 209, 23, 0.5);
 }
@@ -394,8 +407,8 @@ textarea {
 #result-area {
   height: 350px;
   color: #333;
-  font-size: 17px;
-  border: solid 2px #333;
+  font-size: 18px;
+  border: solid 2px #888;
   border-radius: 0 5px 5px 5px;
   padding: 10px;
 }
