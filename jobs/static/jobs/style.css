@@ -329,9 +329,13 @@ textarea {
 /* Further info */
 
 .h2-results {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
-    padding-top: 15px;
+    padding-top: 64px;
+}
+
+.results-p {
+  font-size: 20px;
 }
 
 .result-info-line {
@@ -344,7 +348,12 @@ textarea {
 
 /* Gendered Words Table */
 
+.card-body {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
 .h2-gendered-words {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
@@ -355,10 +364,6 @@ textarea {
 
 .table td {
   text-transform: capitalize;
-}
-
-.card-body {
-  /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
 }
 
 .card p {
@@ -401,7 +406,7 @@ textarea {
   text-transform: capitalize;
   border: solid 2px #888;
   border-radius: 5px 5px 0 0;
-  background-color: rgba(249, 209, 23, 0.5);
+  background-color: #ebebeb;
 }
 
 #result-area {

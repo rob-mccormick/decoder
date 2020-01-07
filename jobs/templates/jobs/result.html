@@ -26,12 +26,13 @@
 
         <div class="col-12 col-md-10 col-lg-8">
           {% if job.result == 'Masculine' %}
-          <p class="result-blurb">Your job ad may put women off applying.<br>It’s worth changing some of the masculine words to get it more neutral.</p>
+          <p class="result-blurb">Your job ad may put women off applying.<br>It’s worth changing some of the masculine words to make it neutral.</p>
           {% elif job.result == 'Neutral' %}
-          <p class="result-blurb">Well done!  No gender word favourites here.</p>
+          <p class="result-blurb">Well done!  No gender word favourites here. 🎉</p>
           {% else %}
           <p class="result-blurb">Your job ad will encourage women to apply - but may put a few men off.<br>You can balance it by using an even number of gendered words.</p>
           {% endif %}
+
           <!-- Gender results -->
           <div class="row my-5 justify-content-center">
 
@@ -63,14 +64,6 @@
           </div>
           <!-- End gender results -->
 
-
-
-          <!-- <p class="pt-2">Gendered words are one factor that can impact who applies for your jobs.  To improve your company's diversity, you should also consider:</p>
-          <ul>
-            <li class="list-point">Your company culture</li>
-            <li class="list-point">If you’re actively fair and inclusive</li>
-            <li class="list-point">Your reputation for equality, diversity and inclusiveness</li>
-          </ul> -->
         </div>
       </div>
     </div>
@@ -79,66 +72,25 @@
 
   <!-- Gender results -->
   <div class="container">
-    <!-- <div class="row my-5 justify-content-center">
-
-      <div class="col-lg-4 col-md-5 col-sm-8 text-center my-3">
-        <i class="fa-3x fas fa-mars mb-3"></i>
-        <p class="gender-word-title">{{ job.masc_word_proportion }}%</p>
-        <ul class="list-group list-group-flush">
-          {% for word, counttotal in mascdictsorted %}
-
-            <li class="list-group-item d-flex justify-content-between align-items-center">{{ word }} <span class="badge badge-warning">{{ counttotal }}</span></li>
-
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="col-lg-4 col-md-5 col-sm-8 text-center my-3">
-        <i class="fa-3x fas fa-venus mb-3"></i>
-        <p class="gender-word-title">{{ job.fem_word_proportion }}%</p>
-        <ul class="list-group list-group-flush">
-          {% for word, counttotal in femdictsorted %}
-
-            <li class="list-group-item d-flex justify-content-between align-items-center">{{ word }} <span class="badge badge-warning">{{ counttotal }}</span></li>
-
-          {% endfor %}
-        </ul>
-      </div>
-    </div> -->
-    <!-- End gender results -->
-
 
     <!-- Further Info -->
-    <p class="pt-2">Gendered words are one factor that can impact who applies for your jobs.  To improve your company's diversity, you should also consider:</p>
-    <ul>
-      <li class="list-point">Your company culture</li>
-      <li class="list-point">If you’re actively fair and inclusive</li>
-      <li class="list-point">Your reputation for equality, diversity and inclusiveness</li>
-    </ul>
-    <div class="row justify-content-center mb-5">
+    {% if job.result != 'Neutral' %}
+    <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
-        <h2 class="h2-results">Now, how to replace your gendered words</h2>
-        <div class="result-info-line"></div>
-        <p>Making your job ad more balanced is easy.  Just swap some of the gendered words with neutral alternatives.  But thinking of neutral words is not the most exciting task.  Tedious at best.</p>
-        <p>To help you out we’ve put together a <a class="link" href="https://uploads-ssl.webflow.com/5b892866490d737ec202537e/5c377e17d8ed0b97f714b308_Gender%20Decoder%20-%20Alternative%20words%2010%20Jan%202019.pdf" target="_blank">list of over 1,000 gender neutral words</a>.</p>
-        <p>Simply search for the word you want to replace and you’ll find neutral alternatives.  There should be options for most contexts.  Or at least some words to get the ideas flowing.</p>
-        <p>You may also find it helpful to see which words to avoid.  For the full list of gendered words picked up by the decoder, click <a class="link" data-toggle="collapse" href="#GenderedWords" role="button" aria-expaneded="false" aria-controls="collapseExample">here</a> (opens below - click again to close).</p>
+        <h2 class="h2-results">What to do now</h2>
+        <!-- <div class="result-info-line"></div> -->
+        <p class="results-p">Improving your job ad is easy.  Just swap some of the gendered words with neutral ones.</p>
+        <p class="results-p">👉 <a class="link" data-toggle="collapse" href="#GenderedWords" role="button" aria-expaneded="false" aria-controls="collapseExample">Click here for a list of gendered words to avoid</a> (click again to close)</p>
+        <p class="results-p">👉 <a class="link" href="https://uploads-ssl.webflow.com/5b892866490d737ec202537e/5c377e17d8ed0b97f714b308_Gender%20Decoder%20-%20Alternative%20words%2010%20Jan%202019.pdf" target="_blank">Get a PDF with over 1,000 gender neutral words here</a></p>
       </div>
     </div>
+    {% endif %}
     <!-- End further info -->
 
 
-    <!-- Buttons and Gendered Words List -->
+    <!-- Gendered Words List -->
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8 mt-2 mb-5">
-        <div class="result-buttons">
-          <div>
-            <a class="submit-button" role="button" onclick="window.location='{% url 'submit' %}';">New Check</a>
-          </div>
-          <!-- <div class="second-button">
-            <a class="submit-button" data-toggle="collapse" href="#GenderedWords" role="button" aria-expaneded="false" aria-controls="collapseExample">Gendered Words</a>
-          </div> -->
-        </div>
 
         <div class="collapse mt-5" id="GenderedWords">
           <div class="card card-body">
@@ -623,15 +575,38 @@
             <p><a class="plus-button" data-toggle="collapse" href="#GenderedWords" role="button" aria-expaneded="false" aria-controls="collapseExample">Close</a></p>
           </div>
         </div>
-
       </div>
-
     </div>
     <!-- End buttons and gendered words list -->
 
+    <!-- Disclaimer -->
+    <div class="row justify-content-center disclaimer-div pb-5">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="disclaimer-content">
+          {% if job.result == 'Neutral' %}
+          <h3 class="disclaimer-title">But remember...</h3>
+          {% else %}
+          <h3 class="disclaimer-title">And remember...</h3>
+          {% endif %}
+          <p class="pt-3">Gendered words are just one area that can impact who applies for you jobs.</p>
+          <p>You can find tips on how to improve your job ads and the diversity of your candidates in our <a class="link" href="https://www.idealrole.com/newsletter" target="_blank">newsletter, the Inside Job</a>.</p>
+        </div>
+      </div>
+    </div>
+    <!-- End disclaimer -->
+
+    <!-- Button to restart -->
+    <div class="row justify-content-center my-5">
+      <div class="result-buttons">
+        <div>
+          <a class="submit-button" role="button" onclick="window.location='{% url 'submit' %}';">New Check</a>
+        </div>
+      </div>
+    </div>
+    <!-- End button to restart -->
 
     <!-- Submitted job ad -->
-    <div class="row justify-content-center job-ad-result">
+    <div class="row justify-content-center job-ad-result pt-5">
       <div class="col-12 col-lg-10 jobad-textarea">
         <p class="result-label">Your job ad:</p>
         <textarea id="result-area" name="job_result">{{ job.job_text }}</textarea>
