@@ -56,7 +56,6 @@ p, li, textarea, a, h4 {
 /* Main page elements */
 
 h1 {
-  /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
   font-weight: 700;
   color: #333;
   font-size: 42px;
@@ -64,7 +63,6 @@ h1 {
 }
 
 h2 {
-  /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
   color: #333;
   font-size: 36px;
   font-weight: 700;
@@ -73,7 +71,6 @@ h2 {
 }
 
 h3 {
-    /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
     color: #333;
     font-size: 1.2em;
     font-weight: 600;
@@ -88,7 +85,6 @@ h4 {
 
 p {
   color: #333;
-  /* font-family: 'Roboto', sans-serif; */
   font-size: 20px;
   line-height: 1.6em;
   font-weight: 400;
@@ -96,7 +92,6 @@ p {
 
 .list-point {
   color: #333;
-  /* font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; */
   font-size: 20px;
   line-height: 1.6em;
   font-weight: 400;
@@ -119,14 +114,7 @@ p {
 
 .hero {
   padding-bottom: 100px;
-  /* margin-bottom: 80px; */
-  /* background: white url("images/angled-background-mobile.png") no-repeat left bottom;
-  background-size: contain; */
 }
-/* 
-.hero-h1 {
-  padding-top: 60px;
-} */
 
 .title {
   max-width: 650px;
@@ -137,30 +125,13 @@ p {
   padding-bottom: 40px;
 }
 
-/* .title-line {
-  height: 9px;
-  width: 50px;
-  background-color: #333;
-  margin-bottom: 30px;
-} */
-
 .hero-p {
-  /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
   color: #333;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.6em;
-  /* max-width: 600px; */
   padding-bottom: 40px;
 }
-
-/* .hero-image {
-  max-width: 280px;
-  margin-left: auto;
-  padding-bottom: 25px;
-  float: right;
-  padding-top: 30px;
-} */
 
 .hero-image {
   width: 100%;
@@ -171,21 +142,17 @@ p {
   padding-top: 30px;
 }
 
-
 /* Info Text */
 
 .why-container {
   padding: 100px 0;
-  /* background-color: rgba(255,180,167,0.5); */
   background: linear-gradient(#bad8e2, #fff);
-  /* background: linear-gradient(#bad8e2, #ffb4a7); */
 }
 
 .why {
   max-width: 800px;
   padding: 40px 40px 60px 40px;
   font-size: 20px;
-  /* border: 5px solid #2191fb; */
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   border-radius: 15px;
   background-color: #fff;
@@ -196,7 +163,6 @@ p {
   padding: 10px 0;
   margin-bottom: 20px;
   line-height: 1.6em;
-  /* color: #2191fb; */
   font-weight: 600;
 }
 
@@ -204,20 +170,12 @@ p {
   margin-top: 25px;
 }
 
-/* .more-info {
-  font-size: 20px;
-} */
-
 .submit-line {
   height: 6px;
   width: 35px;
   background-color: #2191fb;
   margin-bottom: 40px;
 }
-
-/* .plus-link {
-  text-decoration: none !important;
-} */
 
 .link {
   border-bottom: 1px solid #333333;
@@ -229,29 +187,6 @@ p {
   color: #333333;
   border-bottom: 2px solid #2191fb;
 }
-
-/* .continue-link {
-  color: #2191fb;
-}
-
-.continue-link:hover {
-  color: #2191fb;
-} */
-
-/* Background Info */
-
-/* .h2-submit {
-  font-weight: 700;
-  font-size: 24px;
-  color: #333;
-  padding-bottom: 10px;
-} */
-
-/* .h2-line {
-  min-height: 6px;
-  width: 40px;
-  background-color: #2191fb;
-} */
 
 /* Plan */
 
@@ -267,18 +202,6 @@ p {
   border-radius: 10px;
   border: solid 8px #ebebeb;
 }
-
-/* .card-blue {
-  border: solid 8px rgba(186,216,226,0.5);
-}
-
-.card-pink {
-  border: solid 8px rgba(255,180,167,0.5);
-}
-
-.card-yellow {
-  border: solid 8px rgba(249,209,23,0.5);
-} */
 
 .card-img-top {
   max-width: 180px;
@@ -315,7 +238,6 @@ p {
 textarea {
   height: 250px;
   width: 100%;
-  /* font-family: 'Roboto', Helvetica, Arial, sans-serif; */
 }
 
 .submit-button {
@@ -345,19 +267,6 @@ textarea {
 }
 
 
-
-/* Privacy Statement */
-
-/* .privacy-heading {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.privacy-statement {
-  margin-bottom: 100px;
-} */
-
-
 /* RESULTS */
 
 .jumbotron {
@@ -369,7 +278,6 @@ textarea {
 .result-title h1 {
   margin-bottom: 10px;
   padding-top: 15px;
-  /* font-weight: 700; */
 }
 
 .m-line {
@@ -476,22 +384,6 @@ textarea {
   padding-top: 10px;
 }
 
-/* .plus-button {
-  border: 1px solid #efefef;
-  padding: 6px;
-  border-radius: 5px;
-  color: #333;
-  transition: 0.4s;
-  font-weight: 700;
-}
-
-.plus-button:hover {
-  background-color: #ebebeb;
-  text-decoration: none;
-  color: #333;
-} */
-
-
 /* Job ad */
 
 .result-label {
@@ -583,7 +475,6 @@ textarea {
 }
 
 .footer-link {
-  /* font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; */
   font-size: 16px;
   line-height: 1.5em;
   color: rgba(0,0,0,0.4);
