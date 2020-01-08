@@ -9,9 +9,8 @@
         <div class="row">
           <div class="col-12 col-sm-6">
             <div class="title mx-auto">
-              <h1 class="pb-3 hero-h1">Find hidden bias in your job&nbsp;ads</h1>
-              <div class="title-line mb-5"></div>
-              <p class="hero-p">Introducing the Decoder - a free tool to check your job ads for gendered&nbsp;words</p>
+              <h1 class="hero-h1">Find gendered words in your job ad - for&nbsp;free</h1>
+              <p class="hero-p">Words in your job ad can put people off applying.  Use our free decoder to find and replace gendered words so you get more&nbsp;applications</p>
               <a class="submit-button mt-4" href="#job-check">Check Your Job Ad</a>
             </div>
           </div>
@@ -22,9 +21,37 @@
       </div>
     </div>
 
+    <!-- Why gendered words are important -->
+    <div class="why-container">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="why">
+            <h2 class="h2-submit text-center">Why gendered words are important</h2>
+            <p>Research has found that job ads or job descriptions with gendered words can reduce the number of people applying.</p>
+            <a class="link continue-link" data-toggle="collapse" href="#WhyImportant" role="button" aria-expaneded="false" aria-controls="collapseExample">Continue reading...</a>
+            <div class="collapse more-info" id="WhyImportant">
+              <p>Words impact us.  Sometimes directly, like a question or command.  Other times, without us being aware of how they change our behaviour.</p>
+              <p>And some words affect some people, but not others.  Gendered words impact us all differently - often in subtle ways that we are unaware of.</p>
+              <p>In their paper, ‘Evidence That Gendered Wording in Job Adverts Exists and Sustains Gender Inequality’, researchers Gaucher, Friesen and Kay showed that:</p>
+              <ul>
+                  <li class="list-point">Fewer women apply when there are more masculine words in a job ad</li>
+                  <li class="list-point">Ads for traditionally male jobs tend to have more masculine words</li>
+                  <li class="list-point">Women are attracted to job ads with more feminine wording - but slightly fewer men will apply</li>
+                  <li class="list-point">Gendered words in job ads can lead to unintended bias</li>
+              </ul>
+              <p>Learn more about the <a class="link" href="https://www.idealrole.com/blog/gender-job-ads" target="_blank">study of gendered words in job ads</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How the decoder works -->
+
+    <!-- End: How the decoder works -->
 
     <!-- Info on what it is and how it works -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
           <h2 class="h2-submit pb-0">Why gendered words are important</h2>
@@ -46,7 +73,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
@@ -61,14 +88,19 @@
       {% endif %}
     </div>
 
-    <div class="container mb-5">
+    <div class="container add-job-ad">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-11 col-lg-10">
+          <h3 id="job-check" class="mt-5 mb-3">Check your job ad:</h3>
+        </div>
+      </div>
       <form method="POST" action="{% url 'submit' %}">
         <div class="row justify-content-center">
           <div class="col-12 col-md-11 col-lg-10 jobad-textarea">
             <div class="job-form">
               {% csrf_token %}
 
-              <textarea class="form-control" name="job_text" id="job_text" placeholder="Simply paste your job ad here and hit 'Decode' below" required></textarea>
+              <textarea class="form-control" name="job_text" id="job_text" placeholder="Paste your job ad here" required></textarea>
 
               <div class="col mt-3 submission">
                 <input class="submit-button mt-3" type="submit" value="Decode">
@@ -83,7 +115,7 @@
 
 
   <!-- Privacy statement -->
-  <div class="container privacy-statement">
+  <!-- <div class="container privacy-statement">
     <div class="row justify-content-center">
       <div class="col-12 col-md-11 col-lg-8">
         <p class="privacy-heading">A note on privacy</p>
@@ -91,7 +123,7 @@
         <p>You can see our <a class="privacy link" href="https://www.idealrole.com/privacy" target="_blank">Privacy Policy</a> for more details.</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 {% endblock %}

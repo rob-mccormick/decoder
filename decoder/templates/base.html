@@ -20,8 +20,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-    
     <!-- Fontawesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <!-- Google fonts -->
@@ -42,7 +40,8 @@
     <meta property="og:locale" content="en_GB" />
 
     <!-- Cookie consent -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
     <script>
     window.addEventListener("load", function(){
@@ -64,7 +63,7 @@
         "href": "https://www.idealrole.com/privacy"
       }
     })});
-    </script>
+    </script> -->
     <!-- End Cookie consent -->
 
   </head>
@@ -145,6 +144,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 
+    <script src="{% static 'jobs/toggle-text.js' %}"></script>
     <script src="{% static 'jobs/smooth-scroll.js' %}"></script>
     <!-- Smooth scroll and Rotate plus icon -->
     <script>
@@ -154,6 +154,28 @@
        $(".rotate").toggleClass("down")  ;
       })
     </script>
-
+    <!-- Cookie consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#ebebeb",
+          "text": "#333333"
+        },
+        "button": {
+          "background": "#bad8e2",
+          "text": "#333333"
+        }
+      },
+      "theme": "classic",
+      "position": "bottom-left",
+      "content": {
+        "message": "We use cookies to give you the best experience on our website.",
+        "href": "https://www.idealrole.com/privacy"
+      }
+    });
+    </script>
+    <!-- Cookie consent end -->
   </body>
 </html>
