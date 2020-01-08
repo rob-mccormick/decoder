@@ -4,7 +4,7 @@ body {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
 }
 
-p, li, textarea, a {
+p, li, textarea, a, h4 {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
@@ -66,8 +66,9 @@ h1 {
 h2 {
   /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
   color: #333;
-  font-size: 1.1em;
-  line-height: 1.5em;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4em;
   padding-bottom: 10px;
 }
 
@@ -78,6 +79,11 @@ h3 {
     font-weight: 600;
     line-height: 1.7em;
     padding-top: 10px;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 600;
 }
 
 p {
@@ -112,10 +118,10 @@ p {
 /* Hero Section */
 
 .hero {
-  padding-bottom: 25px;
-  margin-bottom: 80px;
-  background: white url("images/angled-background-mobile.png") no-repeat left bottom;
-  background-size: contain;
+  padding-bottom: 100px;
+  /* margin-bottom: 80px; */
+  /* background: white url("images/angled-background-mobile.png") no-repeat left bottom;
+  background-size: contain; */
 }
 /* 
 .hero-h1 {
@@ -170,23 +176,27 @@ p {
 
 .why-container {
   padding: 100px 0;
-  background-color: rgba(255,180,167,0.5);
+  /* background-color: rgba(255,180,167,0.5); */
+  background: linear-gradient(#bad8e2, #fff);
+  /* background: linear-gradient(#bad8e2, #ffb4a7); */
 }
 
 .why {
   max-width: 800px;
   padding: 40px 40px 60px 40px;
   font-size: 20px;
-  border: 5px solid #2191fb;
+  /* border: 5px solid #2191fb; */
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   border-radius: 15px;
   background-color: #fff;
+
 }
 
 .h2-submit {
   padding: 10px 0;
   margin-bottom: 20px;
   line-height: 1.6em;
-  color: #2191fb;
+  /* color: #2191fb; */
   font-weight: 600;
 }
 
@@ -220,13 +230,13 @@ p {
   border-bottom: 2px solid #2191fb;
 }
 
-.continue-link {
+/* .continue-link {
   color: #2191fb;
 }
 
 .continue-link:hover {
   color: #2191fb;
-}
+} */
 
 /* Background Info */
 
@@ -243,11 +253,57 @@ p {
   background-color: #2191fb;
 } */
 
+/* Plan */
+
+.plan-container {
+  padding: 100px 0;
+}
+
+.plan-h2 {
+  margin-bottom: 40px;
+}
+
+.card {
+  border-radius: 10px;
+  border: solid 8px #ebebeb;
+}
+
+/* .card-blue {
+  border: solid 8px rgba(186,216,226,0.5);
+}
+
+.card-pink {
+  border: solid 8px rgba(255,180,167,0.5);
+}
+
+.card-yellow {
+  border: solid 8px rgba(249,209,23,0.5);
+} */
+
+.card-img-top {
+  max-width: 180px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 1.5em;
+  padding: 10px 30px 30px 30px;
+}
 
 /* Submit form */
 
 .add-job-ad {
-  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+#job-check {
+  font-size: 28px;
 }
 
 .form-control {
@@ -410,7 +466,7 @@ textarea {
   text-transform: capitalize;
 }
 
-.card p {
+.gendered-text {
   font-size: 16px;
   line-height: 1.5em;
   margin-bottom: 0;
@@ -609,10 +665,10 @@ textarea {
     max-width: none;
   }
   .hero {
-    background: white url("images/angled-background.png") no-repeat left bottom;
-    background-size: contain;
-    padding-bottom: 100px;
-    margin-bottom: 80px;
+    /* background: white url("images/angled-background.png") no-repeat left bottom;
+    background-size: contain; */
+    /* padding-bottom: 100px; */
+    /* margin-bottom: 80px; */
   }
   .hero-p {
     margin-right: -25px;
@@ -708,10 +764,10 @@ textarea {
     max-width: 530px;
     margin-top: -30px;
   }
-  .hero {
+  /* .hero {
     padding-bottom: 190px;
     margin-bottom: 100px;
-  }
+  } */
   .h2-submit {
     font-size: 30px;
   }
