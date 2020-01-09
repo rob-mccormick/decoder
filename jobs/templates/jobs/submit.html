@@ -2,90 +2,90 @@
 {% load static %}
 
 {% block content %}
-    <!-- hero-section -->
-    <br>
-    <div class="hero pt-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="title mx-auto">
-              <h1 class="hero-h1">Find gendered words in your job ad - for&nbsp;free</h1>
-              <p class="hero-p">Words in your job ad can put people off applying.  Use our free decoder to find and replace gendered words so you get more&nbsp;applications</p>
-              <a class="submit-button mt-4" href="#job-check">Check Your Job Ad</a>
-            </div>
+  <!-- hero-section -->
+  <br>
+  <div class="hero pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="title mx-auto">
+            <h1 class="hero-h1">Find gendered words in your job ad - for&nbsp;free</h1>
+            <p class="hero-p">Words in your job ad can put people off applying.  Use our free decoder to find and replace gendered words so you get more&nbsp;applications</p>
+            <a class="submit-button mt-4" href="#job-check">Check Your Job Ad</a>
           </div>
-          <div class="col-12 col-md-6">
-            <img class="hero-image" src="{% static 'jobs/images/decoder-header-image.png' %}" alt="Highlight gender coded words">
-          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <img class="hero-image" src="{% static 'jobs/images/decoder-header-image.png' %}" alt="Highlight gender coded words">
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Why gendered words are important -->
-    <div class="why-container">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="why">
-            <h2 class="h2-submit text-center">Why gendered words are important</h2>
-            <p>Research has found that job ads or job descriptions with gendered words can reduce the number of people applying.</p>
-            <a class="link continue-link" data-toggle="collapse" href="#WhyImportant" role="button" aria-expaneded="false" aria-controls="collapseExample">Continue reading...</a>
-            <div class="collapse more-info" id="WhyImportant">
-              <p>Words impact us.  Sometimes directly, like a question or command.  Other times, without us being aware of how they change our behaviour.</p>
-              <p>And some words affect some people, but not others.  Gendered words impact us all differently - often in subtle ways that we are unaware of.</p>
-              <p>In their paper, ‘Evidence That Gendered Wording in Job Adverts Exists and Sustains Gender Inequality’, researchers Gaucher, Friesen and Kay showed that:</p>
-              <ul>
-                  <li class="list-point">Fewer women apply when there are more masculine words in a job ad</li>
-                  <li class="list-point">Ads for traditionally male jobs tend to have more masculine words</li>
-                  <li class="list-point">Women are attracted to job ads with more feminine wording - but slightly fewer men will apply</li>
-                  <li class="list-point">Gendered words in job ads can lead to unintended bias</li>
-              </ul>
-              <p>Learn more about the <a class="link" href="https://www.idealrole.com/blog/gender-job-ads" target="_blank">study of gendered words in job ads</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- How the decoder works -->
-    <div class="container plan-container">
+  <!-- Why gendered words are important -->
+  <div class="why-container">
+    <div class="container">
       <div class="row justify-content-center">
-        <h2 class="plan-h2 text-center">How the decoder works</h2>
+        <div class="why">
+          <h2 class="h2-submit text-center">Why gendered words are important</h2>
+          <p>Research has found that job ads or job descriptions with gendered words can reduce the number of people applying.</p>
+          <a class="link continue-link" data-toggle="collapse" href="#WhyImportant" role="button" aria-expaneded="false" aria-controls="collapseExample">Continue reading...</a>
+          <div class="collapse more-info" id="WhyImportant">
+            <p>Words impact us.  Sometimes directly, like a question or command.  Other times, without us being aware of how they change our behaviour.</p>
+            <p>And some words affect some people, but not others.  Gendered words impact us all differently - often in subtle ways that we are unaware of.</p>
+            <p>In their paper, ‘Evidence That Gendered Wording in Job Adverts Exists and Sustains Gender Inequality’, researchers Gaucher, Friesen and Kay showed that:</p>
+            <ul>
+                <li class="list-point">Fewer women apply when there are more masculine words in a job ad</li>
+                <li class="list-point">Ads for traditionally male jobs tend to have more masculine words</li>
+                <li class="list-point">Women are attracted to job ads with more feminine wording - but slightly fewer men will apply</li>
+                <li class="list-point">Gendered words in job ads can lead to unintended bias</li>
+            </ul>
+            <p>Learn more about the <a class="link" href="https://www.idealrole.com/blog/gender-job-ads" target="_blank">study of gendered words in job ads</a>.</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <div class="row justify-content-center">
-        <div class="card-deck">
-          <div class="col-md-4">
-            <div class="card plan-card mb-5">
-              <img src="{% static 'jobs/images/step-one-circle.png' %}" class="card-img-top" alt="Step 1">
-              <div class="card-body">
-                <h4 class="card-title">Enter your job ad</h4>
-                <p class="card-text">Paste your job ad below and hit 'decode'</p>
-              </div>
+  <!-- How the decoder works -->
+  <div class="container plan-container">
+    <div class="row justify-content-center">
+      <h2 class="plan-h2 text-center">How the decoder works</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="card-deck">
+        <div class="col-md-4">
+          <div class="card plan-card mb-5">
+            <img src="{% static 'jobs/images/step-one-circle.png' %}" class="card-img-top" alt="Step 1">
+            <div class="card-body">
+              <h4 class="card-title">Enter your job ad</h4>
+              <p class="card-text">Paste your job ad below and hit 'decode'</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card plan-card mb-5">
-              <img src="{% static 'jobs/images/step-two-circle.png' %}" class="card-img-top" alt="Step 2">
-              <div class="card-body">
-                <h4 class="card-title">Get your results</h4>
-                <p class="card-text">The decoder finds gendered words in your ad</p>
-              </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card plan-card mb-5">
+            <img src="{% static 'jobs/images/step-two-circle.png' %}" class="card-img-top" alt="Step 2">
+            <div class="card-body">
+              <h4 class="card-title">Get your results</h4>
+              <p class="card-text">The decoder finds gendered words in your ad</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card plan-card mb-5">
-              <img src="{% static 'jobs/images/step-three-circle.png' %}" class="card-img-top" alt="Step 3">
-              <div class="card-body">
-                <h4 class="card-title">Update your ad</h4>
-                <p class="card-text">Replace gendered words with neutral ones</p>
-              </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card plan-card mb-5">
+            <img src="{% static 'jobs/images/step-three-circle.png' %}" class="card-img-top" alt="Step 3">
+            <div class="card-body">
+              <h4 class="card-title">Update your ad</h4>
+              <p class="card-text">Replace gendered words with neutral ones</p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-    <!-- End: How the decoder works -->
+
+  </div>
+  <!-- End: How the decoder works -->
 
     <!-- submit text -->
   <div class="container">
