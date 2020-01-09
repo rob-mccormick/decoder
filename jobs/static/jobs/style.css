@@ -63,7 +63,6 @@ h2 {
 
 h3 {
     color: #333;
-    /* font-size: 1.2em; */
     font-size: 24px;
     font-weight: 600;
     line-height: 1.4em;
@@ -187,7 +186,7 @@ p {
   margin-bottom: 30px;
 }
 
-.card {
+.plan-card {
   border-radius: 10px;
   border: solid 8px #ebebeb;
   max-width: 300px;
@@ -303,7 +302,6 @@ textarea {
 }
 
 .gender-word-title {
-  font-size: 18px;
   font-weight: 600;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   color: #888;
@@ -322,8 +320,6 @@ textarea {
 /* Further info */
 
 .h2-results {
-    /* font-size: 32px;
-    font-weight: 700; */
     padding-top: 64px;
 }
 
@@ -336,8 +332,9 @@ textarea {
 
 /* Gendered Words Table */
 
-.card-body {
+.result-card-body {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  padding: 20px;
 }
 
 .h2-gendered-words {
@@ -362,6 +359,21 @@ textarea {
 
 .card li {
   padding-top: 10px;
+}
+
+.plus-button {
+  border: 1px solid #efefef;
+  padding: 6px;
+  border-radius: 5px;
+  color: #333;
+  transition: 0.4s;
+  font-weight: 700;
+}
+
+.plus-button:hover {
+  background-color: #ebebeb;
+  text-decoration: none;
+  color: #333;
 }
 
 /* Job ad */
@@ -405,11 +417,15 @@ textarea {
 .bg-footer {
   background-color: #ebebeb;
   border-top: 1px solid rgba(0,0,0,0.2);
-  padding: 100px 0 140px 0;
+  padding: 60px 0 100px 0;
+}
+
+.footer-brand {
+  margin-top: 60px;
 }
 
 .footer-logo {
-  width: 150px;
+  width: 120px;
   margin-bottom: 20px;
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
@@ -425,7 +441,7 @@ textarea {
 }
 
 .footer-one-liner p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6em;
   color: rgba(0,0,0,0.6);
 }
@@ -499,7 +515,7 @@ textarea {
 
 /* MEDIA QUERIES */
 
-/* Navbar and footer */
+/* Navbar */
 
 @media only screen and (max-width: 768px) {
   .navbar {
@@ -510,51 +526,24 @@ textarea {
     padding-top: 20px;
     padding-bottom: 10px;
   }
-  .footer-logo {
-    width: 120px;
-  }
-  .footer-icons {
-      padding-right: 34px;
-  }
   .navbar-brand img {
     width: 100px;
   }
 }
 
-
 /* All other elements */
-/* 
-@media (min-width: 360px) {
-  .result-buttons {
-    flex-direction: row;
-  }
-  .second-button {
-    margin-left: 20px;
-    margin-top: 0;
-  }
-  .table {
-    font-size: 15px;
-  }
-} */
-
 
 @media (min-width: 576px) {
   .hero-image {
     margin-top: 30px;
     max-width: none;
   }
-  .hero {
-    /* background: white url("images/angled-background.png") no-repeat left bottom;
-    background-size: contain; */
-    /* padding-bottom: 100px; */
-    /* margin-bottom: 80px; */
-  }
-  .table {
-    font-size: 16px;
-  }
-  .ml-form {
-    margin-top: 110px;
-  }
+  /* .hero {
+    background: white url("images/angled-background.png") no-repeat left bottom;
+    background-size: contain;
+    padding-bottom: 100px;
+    margin-bottom: 80px;
+  } */
   h1 {
     font-size: 32px;
   }
@@ -570,8 +559,14 @@ textarea {
   .plan-h2 {
     margin-bottom: 50px;
   }
-  .gender-word-title {
-    font-size: 20px;
+  .table {
+    font-size: 16px;
+  }
+  .bg-footer {
+    padding: 80px 10px 120px 10px;
+  }
+  .footer-logo {
+    width: 130px;
   }
 }
 
@@ -609,6 +604,12 @@ textarea {
   }
   #result-area {
     font-size: 18px;
+  }
+  .result-card-body {
+    padding: 30px;
+  }
+  .footer-brand {
+    margin-top: 0;
   }
 }
 
@@ -672,5 +673,14 @@ textarea {
   }
   .h2-gendered-words {
     font-size: 26px;
+  }
+  .bg-footer {
+    padding: 100px 0 140px 0;
+  }
+  .footer-logo {
+    width: 150px;
+  }
+  .footer-one-liner p {
+    font-size: 16px;
   }
 }
