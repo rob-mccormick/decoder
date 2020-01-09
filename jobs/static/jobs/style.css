@@ -10,6 +10,10 @@ p, li, textarea, a, h4 {
 
 /* Navbar */
 
+.nav-container {
+  margin: 0 auto;
+}
+
 .navbar {
   padding-top: 11px;
   padding-bottom: 11px;
@@ -121,12 +125,12 @@ p {
 }
 
 .hero-image {
-  width: 100%;
-  max-width: 340px;
+  width: 90%;
+  max-width: 300px;
   display: block;
   margin: auto;
   padding-bottom: 25px;
-  padding-top: 30px;
+  padding-top: 80px;
 }
 
 /* Info Text */
@@ -534,10 +538,10 @@ textarea {
 /* All other elements */
 
 @media (min-width: 576px) {
-  .hero-image {
+  /* .hero-image {
     margin-top: 30px;
     max-width: none;
-  }
+  } */
   /* .hero {
     background: white url("images/angled-background.png") no-repeat left bottom;
     background-size: contain;
@@ -559,6 +563,10 @@ textarea {
   .plan-h2 {
     margin-bottom: 50px;
   }
+  .plan-card {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
   .table {
     font-size: 16px;
   }
@@ -572,9 +580,14 @@ textarea {
 
 
 @media (min-width: 768px) {
+  .hero {
+    margin-top: 20px;
+  }
   .hero-image {
     max-width: 360px;
-    margin-top: 0px;
+    padding-top: 60px;
+    margin-top: 40px;
+    float: right;
   }
   .h2-gendered-words {
     font-size: 22px;
@@ -591,6 +604,10 @@ textarea {
   .card-column {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .plan-card {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
   }
   .jumbotron {
     padding-top: 100px;
@@ -630,6 +647,10 @@ textarea {
   p {
     font-size: 20px;
   }
+  .hero-image {
+    max-width: 450px;
+    margin-top: 20px;
+  }
   .submit-button {
     font-size: 16px;
     padding: 12px 20px;
@@ -640,11 +661,15 @@ textarea {
   .why-container {
     padding: 140px 0;
   }
+  .plan-card {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
   .card-img-top {
     max-width: 150px;
   }
   .title {
-    margin-top: 80px;
+    margin-top: 20px;
   }
   .h2-submit {
     font-size: 32px;
@@ -656,10 +681,6 @@ textarea {
   .container {
     padding-left: 20px;
     padding-right: 20px;
-  }
-  .hero-image {
-    max-width: 530px;
-    margin-top: -30px;
   }
   .h2-submit {
     font-size: 30px;
@@ -682,5 +703,12 @@ textarea {
   }
   .footer-one-liner p {
     font-size: 16px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .title {
+    margin-top: 80px;
   }
 }
